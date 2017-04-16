@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            News Logo
+        </div>
+    </div>
+    <div class="content">
+        <div class="filter-bar">
+            <form name="filter">
+                <div class="filter-item filter-date">Фильтр по дате: от: <input name="date-from" type="date" /> до: <input name="date-to" type="date" /></div>
+                <div class="filter-item">Фильтр по автору:
+                    <select name="author">
+                        <option value="all" selected>Все</option>
+                        <option value="meduza">Meduza</option>
+                        <option value="fapl">Fapl.ru</option>
+                        <option value="ria">Ria новости</option>
+                    </select>
+                </div>
+                <input name="submit" type="button" value="Применить" />
+            </form>
+        </div>
+        <div class="article-list"></div>
+        <div class="pagination-bar">
+            <button class="left-btn"><</button>
+            <div class="pagination-pages"></div>
+            <button class="right-btn">></button>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-container">
+            Автор: Лебедев Николай
+        </div>
+    </div>
+
+    <!--article item template-->
+    <template id="template-article-list-item">
+        <div class="article-list-item" data-id="id">
+            <h3 class="article-list-item-title">
+                Заголовок статьи
+            </h3>
+            <p class="article-list-item-summary">
+                Краткое описание для статьи. Тут краткое описание
+            </p>
+            <div class="article-list-item-meta">
+                <span>Автор: <span class="article-list-item-author"></span></span>
+                <span>Опубликована: <span class="article-list-item-date"></span></span>
+            </div>
+        </div>
+    </template>
+
+    <!--scripts here-->
+    <script src="index.js"></script>
+</body>
+</html>
